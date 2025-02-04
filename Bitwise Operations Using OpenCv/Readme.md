@@ -24,11 +24,10 @@ This script demonstrates various bitwise operations using OpenCV and NumPy. The 
    cv.imshow('Circle', circle)
    ```
    This displays the individual shapes.
-
+    - A white rectangle is drawn on a black background.
     ![Rectangle](./Output%20Images/Rectangle.png)
-   - A white rectangle is drawn on a black background.
-    ![Circle](./Output%20Images/Circle.png)
    - A white circle is drawn on a black background.
+    ![Circle](./Output%20Images/Circle.png)
 
 
 4. **Perform Bitwise Operations**:
@@ -46,7 +45,7 @@ This script demonstrates various bitwise operations using OpenCV and NumPy. The 
      cv.imshow('Bitwise OR', bitwise_or)
      ```
 
-    ![Bitwise OR](./Output%20Images/Bitwise%20OR.png)
+     ![Bitwise OR](./Output%20Images/Bitwise%20OR.png)
 
    - **Bitwise XOR** (Only non-intersecting parts of both shapes):
      ```python
