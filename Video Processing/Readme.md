@@ -61,7 +61,8 @@ cv.destroyAllWindows()
 - `cv.destroyAllWindows()` closes all OpenCV windows.
 
 ## Video Output
-[!Watch the video](./Video/dog.mp4)
+## Video Output
+![Video Preview](./Video/dog.mp4)
 
 
 ## Summary
