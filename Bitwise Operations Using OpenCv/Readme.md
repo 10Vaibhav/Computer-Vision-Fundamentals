@@ -17,6 +17,11 @@ This script demonstrates various bitwise operations using OpenCV and NumPy. The 
    rectangle = cv.rectangle(blank.copy(), (30, 30), (370, 370), 255, -1)
    circle = cv.circle(blank.copy(), (200, 200), 200, 255, -1)
    ```
+- A white rectangle is drawn on a black background.
+    ![Rectangle](./Output%20Images/Rectangle.png)
+
+- A white circle is drawn on a black background.
+    ![Circle](./Output%20Images/Circle.png)
 
 3. **Display the shapes**:
    ```python
@@ -24,11 +29,6 @@ This script demonstrates various bitwise operations using OpenCV and NumPy. The 
    cv.imshow('Circle', circle)
    ```
    This displays the individual shapes.
-    - A white rectangle is drawn on a black background.
-    ![Rectangle](./Output%20Images/Rectangle.png)
-   - A white circle is drawn on a black background.
-    ![Circle](./Output%20Images/Circle.png)
-
 
 4. **Perform Bitwise Operations**:
    - **Bitwise AND** (Common regions between rectangle and circle):
