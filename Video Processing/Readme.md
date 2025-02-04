@@ -70,3 +70,72 @@ cv.destroyAllWindows()
 - Resources are released at the end to prevent memory issues.
 
 
+# Rescaling Videos
+
+## Description
+This script demonstrates how to use OpenCV to:
+- Read and display images.
+- Resize images using interpolation.
+- Read and resize videos.
+
+
+## Code Explanation
+
+### 1. Reading and Displaying an Image
+```python
+img = cv.imread('../Resources/Photos/cat.jpg')
+cv.imshow('Cat', img)
+```
+This loads an image (`cat.jpg`) and displays it using OpenCV's `imshow()` function.
+
+### 2. Rescaling Images and Videos
+The `rescaleFrame()` function rescales an image, video, or live video frame by a given scale factor (default: 0.75).
+```python
+def rescaleFrame(frame, scale=0.75):
+    width = int(frame.shape[1] * scale)
+    height = int(frame.shape[0] * scale)
+    dimensions = (width, height)
+    return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
+```
+
+### 3. Resizing an Image
+```python
+resized_image = rescaleFrame(img)
+cv.imshow('Image', resized_image)
+```
+This rescales the loaded image and displays the resized version.
+
+### 4. Reading and Resizing a Video
+```python
+capture = cv.VideoCapture('../Resources/Videos/dog.mp4')
+
+while True:
+    isTrue, frame = capture.read()
+    if not isTrue:
+        break
+    frame_resized = rescaleFrame(frame)
+    cv.imshow('Video', frame)
+    cv.imshow('Video Resized', frame_resized)
+    if cv.waitKey(20) & 0xFF == ord('d'):
+        break
+```
+- This reads a video (`dog.mp4`) and displays both the original and resized versions.
+- The loop continues reading frames until the user presses the `d` key.
+
+### 5. Changing Resolution for Live Video
+```python
+def changeRes(width, height):
+    capture.set(3, width)
+    capture.set(4, height)
+```
+This function sets the resolution for live video capture (webcam input).
+
+### 6. Releasing Resources
+```python
+capture.release()
+cv.destroyAllWindows()
+```
+Releases the video capture object and closes all OpenCV windows.
+
+
+
