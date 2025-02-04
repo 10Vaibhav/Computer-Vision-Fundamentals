@@ -41,7 +41,6 @@ mask = cv.circle(blank, (img.shape[1] // 2, img.shape[0] // 2), 100, 255, -1)
 ```
 This creates a circular mask at the center of the image with a radius of 100 pixels.
 
-**Output:**
 ![image1](./Output%20Images/Masking.png) ![image2](./Output%20Images/Colour%20Masking.png)
 
 ### 5. Compute and Display Grayscale Histogram
