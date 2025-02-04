@@ -87,22 +87,3 @@ plt.show()
 cv.waitKey(0)
 ```
 Prevents the script from exiting immediately so that images can be viewed.
-
-## Output Summary
-After running the script, the following will be displayed:
-1. The original image
-2. The grayscale image
-3. The masked image
-4. The grayscale histogram
-5. The color histogram
-
-### Example Output:
-![Histogram Output](images/histogram_output.png)
-
-## Conclusion
-This script provides an effective way to analyze image intensity distributions, which can be useful for tasks such as:
-- Image enhancement
-- Thresholding
-- Contrast adjustment
-- Image segmentation
-
